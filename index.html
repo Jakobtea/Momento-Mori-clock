@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memento Mori Clock</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        
+
+        <div id="input-section">
+            <h1>Memento Mori Clock</h1>
+            <p>Reflect on time's passage. Answer a few questions for an estimated lifespan.</p>
+            <div class="disclaimer">
+                <p><strong>Disclaimer:</strong> This lifespan estimation is a simplified model for illustrative purposes only and is not medical advice. Consult a healthcare professional for personalized health information.</p>
+            </div>
+
+            <label for="birthdate">Your Birthdate:</label>
+            <input type="date" id="birthdate" required>
+
+            <fieldset>
+                <legend>Gender:</legend>
+                <label><input type="radio" name="gender" value="male" checked> Male</label>
+                <label><input type="radio" name="gender" value="female"> Female</label>
+            </fieldset>
+
+            <fieldset>
+                <legend>Lifestyle Factors:</legend>
+                <label><input type="checkbox" id="smoker"> Do you smoke?</label>
+                <label><input type="checkbox" id="obese"> Are you obese? (BMI > 30)</label>
+                <label><input type="checkbox" id="exercise"> Do you exercise regularly (3+ times/week)?</label>
+                <label><input type="checkbox" id="healthy-diet"> Do you generally eat a healthy diet?</label>
+            </fieldset>
+
+            <button id="start-clock">Start Clock</button>
+        </div>
+
+        <div id="clock-section" class="hidden">
+            <p class="quote" id="memento-quote"></p>
+            <div class="countdown-display" id="countdown-display">
+                <!-- Seconds will be displayed here -->
+            </div>
+            <p class="message" id="end-message"></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
